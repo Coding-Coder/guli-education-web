@@ -1,0 +1,23 @@
+<script>
+    // 模板字符串相当于加强版的字符串，用反引号 `,除了作为普通字符串，还可以用来定义多行字符串，还可以在字符串中加入变量和表达式。
+
+    // 1、多行字符串(使用`符号实现换行)
+    let str1 = `hello,
+        es6 demo up!`
+    console.log(str1)
+
+    // 2、字符串插入变量和表达式。变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式(在`符号里面使用表达式获取变量值)
+    let name = "lxy"
+    let age = 18
+
+    let str2 = `hello ${name},age is ${age + 1}`
+    console.log(str2)
+
+    // 3、在`符号调用方法
+    function f1() {
+        return "hello f1"
+    }
+
+    let str3 = `demo, ${f1()}`
+    console.log(str3)
+</script>

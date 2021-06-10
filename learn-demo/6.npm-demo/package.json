@@ -1,0 +1,15 @@
+{
+  "name": "6.npm-demo",
+  "version": "1.0.0",
+  "description": "NPM全称Node Package Manager，是Node.js**包管理工具**，是全球最大的模块生态系统，里面所有的模块都是开源免费的；也是Node.js的包管理工具，相当于前端的Maven 。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

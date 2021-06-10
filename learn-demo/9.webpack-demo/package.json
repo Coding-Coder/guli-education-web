@@ -1,0 +1,16 @@
+{
+  "name": "9.webpack-demo",
+  "version": "1.0.0",
+  "description": "Webpack 是一个前端资源加载/打包工具。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。\r 从图中我们可以看出，Webpack 可以**将多种静态资源 js、css、less 转换成一个静态文件**，减少了页面的请求。 \r ![image.png](https://i.loli.net/2021/06/02/sXI4xJrH9QymGLq.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "style-loader": "^2.0.0"
+  }
+}

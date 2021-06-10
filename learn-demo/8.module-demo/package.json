@@ -1,0 +1,15 @@
+{
+  "name": "8.module-demo",
+  "version": "1.0.0",
+  "description": "随着网站逐渐变成\"互联网应用程序\"，嵌入网页的Javascript代码越来越庞大，越来越复杂。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
