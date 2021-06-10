@@ -39,7 +39,7 @@ a{
 /*表单样式*/
 .sign .main{
     background-color: #FFFFFF;
-    width: 400px;
+    width: 430px;
     padding: 50px;
     margin: 60px auto 0 auto;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -48,7 +48,7 @@ a{
 
 .sign .logo{
     position: absolute;
-    top: 56px;
+    top: -40px;
     left: 50px;
 }
 
@@ -118,7 +118,7 @@ a{
 }
 .sign form .input-prepend i {
     position: absolute;
-    top: 14px;
+    top: 5px;
     left: 10px;
     font-size: 18px;
     color: #969696;
