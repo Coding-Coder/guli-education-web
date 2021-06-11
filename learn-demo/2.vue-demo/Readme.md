@@ -38,6 +38,7 @@
 - `v-if`&`v-else`:**条件指令**
 - `v-show`:**条件指令**,效果同`v-if`
 - `v-for`:**列表渲染**
+- `v-html`:**渲染内容中的HTML标签**
 
 ## Vue组件
 组件（Component）是 Vue.js 最强大的功能之一。
