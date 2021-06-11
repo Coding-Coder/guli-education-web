@@ -82,6 +82,9 @@
                     <span v-if="Number(item.price) === 0" class="fr jgTag bg-green">
                       <i class="c-fff fsize12 f-fA">免费</i>
                     </span>
+                    <span v-if="Number(item.price) !== 0" class="fr jgTag">
+                      <i class="c-999 fbold fsize12 f-fA">￥{{item.price}}</i>
+                    </span>
                     <span class="fl jgAttr c-ccc f-fA">
                       <i class="c-999 f-fA">{{item.buyCount}}人学习</i>|<i class="c-999 f-fA">{{item.viewCount}}浏览</i>
                     </span>
