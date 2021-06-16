@@ -105,6 +105,7 @@
                             </a>
                             <ol class="lh-menu-ol" style="display: block;">
                               <li class="lh-menu-second ml30" v-for="video in chapter.children" :key="video.id">
+                                <!-- target="_blank" 表示在一个新的标签页打开 -->
                                 <a :href="`/player/${video.videoSourceId}`" target="_blank">
                                   <span class="fr">
                                     <i class="free-icon vam mr10">免费试听</i>
