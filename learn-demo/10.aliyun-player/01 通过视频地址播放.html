@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试阿里云视频播放器</title>
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.3/skins/default/aliplayer-min.css" />
+    <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.9.3/aliplayer-min.js"></script>
+</head>
+
+<body>
+    <div  class="prism-player" id="J_prismPlayer"></div>
+    <script>
+        // 阿里云视频播放在线配置：https://player.alicdn.com/aliplayer/setting/setting.html
+        var player = new Aliplayer({
+            id: 'J_prismPlayer',
+            width: '100%',
+            autoplay: false,
+            cover: 'https://guli-education-lxy.oss-cn-hangzhou.aliyuncs.com/course/7.jpg',  
+            //播放配置
+            //播放地址播放,此播放优先级最高，此种方式不能播放加密视频
+            source : 'https://outin-e3f25f21c78211eb995900163e00b174.oss-cn-shanghai.aliyuncs.com/sv/1c2f2b02-179eadd9661/1c2f2b02-179eadd9661.mp4?Expires=1623397596&OSSAccessKeyId=LTAI4FfD63zoqnm6ckiBFfXZ&Signature=FS40rtyAFsj%2FjLFoGJL4YVsHZ3E%3D',
+        },function(player){
+            console.log('播放器创建好了')
+        });
+    </script>
+</body>
+
+</html>

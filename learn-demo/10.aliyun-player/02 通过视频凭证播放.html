@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试阿里云视频播放器</title>
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.3/skins/default/aliplayer-min.css" />
+    <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.9.3/aliplayer-min.js"></script>
+</head>
+
+<body>
+    <div  class="prism-player" id="J_prismPlayer"></div>
+    <script>
+        // 阿里云视频播放在线配置：https://player.alicdn.com/aliplayer/setting/setting.html
+        var player = new Aliplayer({
+            id: 'J_prismPlayer',
+            width: '100%',
+            autoplay: false,
+            cover: 'https://guli-education-lxy.oss-cn-hangzhou.aliyuncs.com/course/7.jpg',  
+            //播放配置
+            //播放凭证播放（推荐）
+            //阿里云播放器支持通过播放凭证自动换取播放地址进行播放，接入方式更为简单，且安全性更高。播放凭证默认时效为100秒（最大为3000秒），
+            //只能用于获取指定视频的播放地址，不能混用或重复使用。如果凭证过期则无法获取播放地址，需要重新获取凭证。
+            encryptType:'1',//如果播放加密视频，则需设置encryptType=1，非加密视频无需设置此项
+            //视频ID
+            vid : 'aa254c152fcc41899f26a370efb0ab86',
+            //视频播放凭证 注意：播放凭证有过期时间，默认值：100秒 。取值范围：100~3000。
+            playauth : 'eyJTZWN1cml0eVRva2VuIjoiQ0FJU2h3TjFxNkZ0NUIyeWZTaklyNWFBZk1MaDNvdFp3WWl6WVgvem5uRWthYmhHcXBMQ2x6ejJJSDVFZW5OcUF1d2F2Lzh5bEd0VDZQZ1psck1xRnNVY0hSQ1VNSlFxdjhRTnFsdjZKcExGc3QySjZyOEpqc1VkbStzci9GbXBzdlhKYXNEVkVmbDJFNVhFTWlJUi8wMGU2TC8rY2lyWXBUWEhWYlNDbFo5Z2FQa09Rd0M4ZGtBb0xkeEtKd3hrMnQxNFVtWFdPYVNDUHdMU2htUEJMVXhtdldnR2wyUnp1NHV5M3ZPZDVoZlpwMXI4eE80YXhlTDBQb1AyVjgxbExacGxlc3FwM0k0U2M3YmFnaFpVNGdscjhxbHg3c3BCNVN5Vmt0eVdHVWhKL3phTElvaXQ3TnBqZmlCMGVvUUFQb3BGcC9YNmp2QWF3UExVbTliWXhncGhCOFIrWGo3RFpZYXV4N0d6ZW9XVE84MCthS3p3TmxuVXo5bUxMZU9WaVE0L1ptOEJQdzQ0RUxoSWFGMElVRUJ5RUd5RWNQSDZwd3FTUFZqK0U1TG9pdjltamNCSHFIeno1c2VQS2xTMVJMR1U3RDBWSUpkVWJUbHphVTVJaHphNkx2TlhLRkVjS0FnNVdlMlBNYXgzYlFGRHI1M3ZzVGJiWHpaYjBtcHR1UG56ZDEwMVJuWGh4eUdWR29BQmxJdnNFTWJZeUhDbzREdVJIazJXSWYyZDRVb2pqTHBHWW9rNTFwalhnVCtjZCtoNU1HUGR1ZjlUQm0razVpaFRMbUIvZlRCY1F2MTFtVFo5MXBXaENrQVc4eE5JQWZ0Ti9yeXJTb3lSVWs2Vmx3ckliOXBxNk9ob1ZkOFpzWHNiZ2FKUzVodTBSVmkrdk1hUGhIRTFDK0F2U1RmUjYrTFJEcjZtblhKeWpBND0iLCJBdXRoSW5mbyI6IntcIkNJXCI6XCJyTGlaWlE0WSt0MUgxbXpjZWE3QkNjeVdOU0NjaHZLN3V4VGdSckg1N2VuNmtuWDk0VURGUTc3YjY1SC90Q1FZXCIsXCJDYWxsZXJcIjpcIjhnNFdBWWl2RWU3UThYZWhYcFVLSG15N0Z1LzYrN2FGSG1yY3BoSW9LLzg9XCIsXCJFeHBpcmVUaW1lXCI6XCIyMDIxLTA2LTExVDA3OjA3OjIxWlwiLFwiTWVkaWFJZFwiOlwiYWEyNTRjMTUyZmNjNDE4OTlmMjZhMzcwZWZiMGFiODZcIixcIlNpZ25hdHVyZVwiOlwiRERaeGwrRlhaR3JhaW5MT2Mvak9WTmV1SkVjPVwifSIsIlZpZGVvTWV0YSI6eyJTdGF0dXMiOiJOb3JtYWwiLCJWaWRlb0lkIjoiYWEyNTRjMTUyZmNjNDE4OTlmMjZhMzcwZWZiMGFiODYiLCJUaXRsZSI6InRlc3QtdmlkZW8iLCJDb3ZlclVSTCI6Imh0dHA6Ly9vdXRpbi1lM2YyNWYyMWM3ODIxMWViOTk1OTAwMTYzZTAwYjE3NC5vc3MtY24tc2hhbmdoYWkuYWxpeXVuY3MuY29tL2FhMjU0YzE1MmZjYzQxODk5ZjI2YTM3MGVmYjBhYjg2L3NuYXBzaG90cy8xZWM1NWIzMTgxM2I0NWQ5OTk0YmQwM2VmMTUzMzVhYy0wMDAwMS5qcGc/RXhwaXJlcz0xNjIzMzk4NzQxJk9TU0FjY2Vzc0tleUlkPUxUQUk0RmZENjN6b3FubTZja2lCRmZYWiZTaWduYXR1cmU9U2E1JTJCWlpzVjA0TGlNd2pQWDN4eDhhUzBOazQlM0QiLCJEdXJhdGlvbiI6MTYuMjc2N30sIkFjY2Vzc0tleUlkIjoiU1RTLk5VNTd4VTNUeHZKWGNZQnpxcWU3akVXaXUiLCJBY2Nlc3NLZXlTZWNyZXQiOiI3OVVrZFBqbmljZFNCN0dzWmVZdVhna3R4UktwU0oxVmtOS1pOUzhmYmR5SCIsIlJlZ2lvbiI6ImNuLXNoYW5naGFpIiwiQ3VzdG9tZXJJZCI6MTUyMTA0ODU3Mjk4MjMwM30=',
+        },function(player){
+            console.log('播放器创建好了')
+        });
+    </script>
+</body>
+
+</html>
