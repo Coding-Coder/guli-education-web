@@ -33,7 +33,10 @@
                 <a class="c-fff vam" title="收藏" href="#" >收藏</a>
               </span>
             </section>
-            <section class="c-attr-mt">
+            <section  v-if="isbuy || Number(courseWebVo.price) === 0" class="c-attr-mt">
+              <a href="#" title="立即观看" class="comm-btn c-btn-3">立即观看</a>
+            </section>
+            <section  v-else class="c-attr-mt">
               <a @click="createOrders()" href="#" title="立即购买" class="comm-btn c-btn-3">立即购买</a>
             </section>
           </section>
@@ -163,26 +166,37 @@ import courseApi from '@/api/course'
 import ordersApi from '@/api/orders'
 
 export default {
-   asyncData({ params, error }) {
-     return courseApi.getCourseInfo(params.id)
-        .then(response => {
-          return {
-            courseWebVo: response.data.data.courseWebVo,
-            chapterVideoList: response.data.data.chapterVideoList,
-            courseId:params.id
-          }
-        })
-   },
-   methods:{
-     //生成订单
-     createOrders() {
-       ordersApi.createOrders(this.courseId)
-        .then(response => {
-          //获取返回订单号
-          //生成订单之后，跳转订单显示页面
-          this.$router.push({path:'/orders/'+response.data.data.orderId})
-        })
-     }
-   }
+  //异步调用
+  asyncData({ params, error }) {
+    return {courseId: params.id}
+  },
+  data() {
+    return {
+      courseWebVo: {},
+      chapterVideoList: [],
+      isbuy: false,
+    }
+  },
+  created() {//在页面渲染之前执行
+    this.initCourseInfo()
+  },
+  methods:{
+    //查询课程详情信息
+    initCourseInfo() {
+      courseApi.getCourseInfo(this.courseId).then(response => {
+        this.courseWebVo = response.data.data.courseWebVo,
+        this.chapterVideoList = response.data.data.chapterVideoList,
+        this.isbuy = response.data.data.isBuy
+      })
+    },
+    //生成订单
+    createOrders() {
+      ordersApi.createOrders(this.courseId).then(response => {
+        //获取返回订单号
+        //生成订单之后，跳转订单显示页面
+        this.$router.push({path:'/orders/'+response.data.data.orderId})
+      })
+    }
+  }
 };
 </script>
